@@ -1,0 +1,41 @@
+header {
+  background-color: #E61A58;
+  color: #fff;
+  margin: auto;
+  width: 512px;
+}
+
+h1 {
+  margin: auto;
+  padding-left: 5%;
+}
+
+.mdl-layout-header {
+  margin: auto;
+}
+
+.demo-card-wide {
+  color: #6A6A6A;
+  margin: auto;
+  width: 512px;
+}
+
+.label, .mdl-card__supporting-text{
+  padding-left: 5%;
+}
+
+.mdl-list {
+  margin: auto;
+  padding-left: 5%;
+  width: 512px;
+}
+
+.mdl-list__item {
+  margin: auto;
+  padding-left: 5%;
+  width: 512px;
+}
+
+.demo-list-item {
+  width: 512px;
+}
