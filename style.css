@@ -16,6 +16,7 @@ h1 {
 
 .demo-card-wide {
   color: #6A6A6A;
+  height: 50px;
   margin: auto;
   width: 512px;
 }
@@ -24,18 +25,38 @@ h1 {
   padding-left: 5%;
 }
 
-.mdl-list {
+.mdl-textfield__input {
+  width: 461px;
+}
+
+.items #toDoList {
   margin: auto;
-  padding-left: 5%;
+  padding: 0px;
   width: 512px;
 }
 
-.mdl-list__item {
-  margin: auto;
-  padding-left: 5%;
+.mdl-list__item-primary-content {
+  line-height: 50px;
+  padding: 0;
   width: 512px;
 }
 
-.demo-list-item {
-  width: 512px;
+.mdl-button {
+  float: right;
+  width: 109px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.mdl-list__item-primary-content {
+  font-size: 1.2rem;
+  margin: auto;
+  width: 461px;
+}
+
+.check {
+  margin-right: 20px;
 }

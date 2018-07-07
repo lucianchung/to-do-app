@@ -28,8 +28,20 @@ function onReady() {
     // set the button text
     deleteButton.textContent = "Delete";
 
+    // // newLi style
+    // newLi.classList.add("demo-card-wide", "mdl-shadow--2dp");
+
+    // newLi style
+    newLi.classList.add("mdl-list__item-primary-content");
+
+    // checkbox style
+    checkbox.classList.add("check")
+
+    // deleteButton styles
+    deleteButton.classList.add("mdl-button", "mdl-js-button", "mdl-button--raised", "mdl-js-ripple-effect");
+
     // attach the checkbox to the li
-    newLi.appendChild(checkbox);
+    newLi.prepend(checkbox);
 
     // attach the button to the li
     newLi.appendChild(deleteButton);
@@ -40,10 +52,17 @@ function onReady() {
     // empty the input
     newToDoText.value = '';
 
+
+
     // delete
     deleteButton.onclick = function () {
       toDoList.removeChild(newLi);
     }
+
+    // add styling
+    // newLi.classList.add("demo-list-item");
+
+
 
   });
 }
