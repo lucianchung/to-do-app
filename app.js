@@ -1,34 +1,24 @@
 
 function onReady() {
-  let id=0;
   const toDos=[];
   const addToDoForm = document.getElementById('addToDoForm');
 
-  // declare deleteButton
-  let deleteButton='';
+// 1. decare // id
+  let id=0;
 
   function createNewToDo() {
     const newToDoText = document.getElementById('newToDoText');
-
-    // 3. increment the id variable
-        let id=1;
-        id++;
-        ++id;
-
     if (!newToDoText.value) {return;}
 
     toDos.push({
       title: newToDoText.value,
       complete: false,
-      id: id.value
+    // 3. increment the id variable
+      id: id++
     });
     newToDoText.value = '';
 
     renderTheUI();
-
-//test
-console.log(toDos.id);
-
   }
 
   function renderTheUI() {
@@ -39,11 +29,10 @@ console.log(toDos.id);
     toDos.forEach(function(toDo) {
       const newLi = document.createElement('li');
       const checkbox = document.createElement('input');
+      checkbox.type = "checkbox";
 // 4. create a delete button
       const deleteButton = document.createElement('button');
       deleteButton.textContent = "Delete";
-
-      checkbox.type = "checkbox";
 
       newLi.textContent = toDo.title;
 
@@ -51,6 +40,24 @@ console.log(toDos.id);
       newLi.appendChild(checkbox);
 // 4b. append delete button to newLi
       newLi.appendChild(deleteButton);
+
+//4c register event listener to deleteButton
+      deleteButton.addEventListener ("click", event =>{
+        event.preventDefault();
+
+        function removeItem() {
+          for (var i = 0; i < toDos.length; i++ ){
+               if( toDo.id < i && id == i){
+                 return true;
+               }else{
+                 event.target.parentElement.remove()
+               }
+            }
+        }
+
+        return toDos.filter(removeItem);
+        renderTheUI();
+      });
 
 
     });
@@ -60,15 +67,6 @@ console.log(toDos.id);
     event.preventDefault();
     createNewToDo();
   });
-
-//4c register event listener to deleteButton
-  deleteButton.addEventListener('click', function () {
-    if (toDo.id === id) {
-      toDoList.removeChild(newLi);
-    }
-    renderTheUI();
-  });
-
 
   renderTheUI();
 }
