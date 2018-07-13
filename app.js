@@ -1,6 +1,6 @@
 
 function onReady() {
-  const toDos=[];
+  let toDos=[];
   const addToDoForm = document.getElementById('addToDoForm');
 
 // 1. decare // id
@@ -45,26 +45,10 @@ function onReady() {
       deleteButton.addEventListener ("click", event =>{
         event.preventDefault();
 
-        let todos = toDos.filter( t => t.id !== id);
+        toDos = toDos.filter( t => t.id !== toDo.id);
 
-        // function removeItem() {
-        //   for (var i = 0; i < toDos.length; i++ ){
-        //        if( toDo.id < i && id == i){
-        //          return true;
-        //        }else{
-        //          toDos.splice(this.id);
-        //
-        //        }
-        //     }
-        // }
-
-
-
-        // toDos.filter(todos);
         renderTheUI();
       });
-
-
     });
   }
 
@@ -75,8 +59,6 @@ function onReady() {
 
   renderTheUI();
 }
-
-
 
 window.onload = function() {
   onReady();
