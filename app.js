@@ -45,17 +45,22 @@ function onReady() {
       deleteButton.addEventListener ("click", event =>{
         event.preventDefault();
 
-        function removeItem() {
-          for (var i = 0; i < toDos.length; i++ ){
-               if( toDo.id < i && id == i){
-                 return true;
-               }else{
-                 event.target.parentElement.remove()
-               }
-            }
-        }
+        let todos = toDos.filter( t => t.id !== id);
 
-        return toDos.filter(removeItem);
+        // function removeItem() {
+        //   for (var i = 0; i < toDos.length; i++ ){
+        //        if( toDo.id < i && id == i){
+        //          return true;
+        //        }else{
+        //          toDos.splice(this.id);
+        //
+        //        }
+        //     }
+        // }
+
+
+
+        // toDos.filter(todos);
         renderTheUI();
       });
 
