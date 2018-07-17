@@ -7,7 +7,7 @@ A project from the **Bloc Design Apprenticeship**
 * CSS
 * JavaScript
 
-![to-do-app screenshot](https://github.com/lucianchung/lucianchung.github.io/blob/master/images/github-screenshots/to-do-app-screenshot.png?raw=true)
+![to-do-app screenshot](https://github.com/lucianchung/lucianchung.github.io/blob/master/images/github-screenshots/to-do-app-screenshot2.png?raw=true)
 
 
 The app allows users to input text to add items to a to do list.
