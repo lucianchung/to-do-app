@@ -15,5 +15,3 @@ Users can then check off items that have been done and delete items from their l
 
 The app uses styling from **Material Design Light**.
 
-
-https://github.com/lucianchung/lucianchung.github.io/blob/master/images/github-screenshots/to-do-app-screenshot.png?raw=true
